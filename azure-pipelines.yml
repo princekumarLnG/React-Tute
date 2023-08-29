@@ -1,0 +1,20 @@
+# Node.js with React
+# Build a Node.js project that uses React.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:none
+
+pool: my-pool
+
+stages:
+  - stage: stageA
+    displayName: This is stage->A
+    jobs:
+      - job: A1
+      - job: A2
+  - stage: stageB
+    dependsOn: []  
+    jobs:
+      - job: B1
+      - job: B2
